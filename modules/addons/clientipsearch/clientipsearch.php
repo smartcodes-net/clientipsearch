@@ -68,8 +68,8 @@ echo "\" class=\"button btn btn-default\"></div>\n        </form>\n\n    </div><
     foreach ($result as $data) {
         $get_client = \Illuminate\Database\Capsule\Manager::table("tblclients")->where("id", $data->userid)->first();
         $tabledata[] = [
-            "<a href='invoices.php?action=edit&id=" . $data->id . "'>" . $data->id . "</a>",
-            "<a href='clientssummary.php?userid=" . $data->userid . "'>" . $data->firstname . " " . $data->lastname . "</a>",
+            "<a href='clientssummary.php?userid=" . $data->id . "'>" . $data->id . "</a>",
+            "<a href='clientssummary.php?userid=" . $data->id . "'>" . $data->firstname . " " . $data->lastname . "</a>",
             $data->email,
         ];
     }
